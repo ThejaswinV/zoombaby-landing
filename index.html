@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="description" content="ZoomBaby - Baby Essentials Delivered in 10 Minutes. Join the waitlist now!">
+    <meta name="keywords" content="baby delivery, baby products, instant delivery, ZoomBaby, diapers, baby essentials">
+    <meta name="author" content="ZoomBaby">
+    <meta property="og:title" content="ZoomBaby - 10-Minute Baby Essentials Delivery">
+    <meta property="og:description" content="Never run out of baby essentials! Join our waitlist for instant WhatsApp ordering.">
+    <meta property="og:image" content="https://yourdomain.com/preview.jpg"> <!-- Replace with actual image URL -->
+    <meta property="og:url" content="https://zoombaby-site.pages.dev/"> <!-- Replace with your Cloudflare link -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZoomBaby – Baby Essentials in 10 Minutes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: #ffffff;
+            color: #000000;
+        }
+    </style>
+</head>
+<body class="text-black font-sans">
+    <!-- Header -->
+    <header class="bg-blue-100 py-4 shadow-md flex items-center justify-center px-6">
+        <a href="/" class="text-2xl font-bold text-black relative">
+            ZoomBaby<span class="absolute text-xs align-super ml-1">™</span>
+        </a>
+    </header>
+    <!-- Hero Section -->
+    <section class="min-h-[40vh] flex flex-col items-center justify-center text-center px-6">
+        <h1 class="text-6xl font-bold leading-tight">Never Run Out of Baby Essentials</h1>
+        <h2 class="text-2xl mt-4">No Apps. No Stockouts. Just Instant Delivery in 10 Minutes—For Parents on a Baby’s Schedule!</h2>
+      
+        <!-- WhatsApp Number Collection -->
+        <form class="mt-8 flex items-center space-x-2" onsubmit="sendWhatsAppMessage(event)">
+            <select id="countryCode" class="px-3 py-3 text-lg border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 font-sans">
+                <option value="+91">+91 🇮🇳</option>
+                <option value="+1">+1 🇺🇸</option>
+                <option value="+44">+44 🇬🇧</option>
+                <option value="+61">+61 🇦🇺</option>
+                <option value="+65">+65 🇸🇬</option>
+            </select>
+            <input type="tel" id="whatsappNumber" placeholder="WhatsApp number" maxlength="10" pattern="[0-9]{10}" class="px-4 py-3 text-base border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" required>
+            <button type="submit" class="bg-blue-400 text-white px-6 py-3 rounded-full shadow-lg hover:bg-blue-500 transition">Join Waitlist</button>
+        </form>
+    </section>
+
+    <!-- Body Copy Section -->
+    <section class="max-w-4xl mx-auto text-center py-2 px-6">
+        <h3 class="text-3xl font-semibold mb-4">Parenting is Unpredictable.<br>Your Baby's Essentials Shouldn’t Be.</h3>
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">Between diaper changes, feeding schedules, and sleepless nights, the last thing you need is a last-minute run to the store. ZoomBaby ensures that your baby's essentials arrive at your doorstep in just 10 minutes, so you can focus on what truly matters—caring for your little one.</p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">No more stockouts. No more waiting. Just instant relief at the tap of a button. Whether it’s midnight emergencies or an unexpected shortage, we’ve got you covered, 24/7.</p>
+        <h4 class="text-3xl font-semibold mt-8 mb-4">Why Choose ZoomBaby?</h4>
+        <ul class="text-lg text-gray-700 leading-relaxed mb-6 space-y-3">
+            <li>🚀 <strong>10-Minute Delivery</strong> – Because every second counts.</li>
+            <li>📦 <strong>Always Available</strong> – No more 'Out of Stock' surprises.</li>
+            <li>💬 <strong>Easy WhatsApp Ordering</strong> – No apps, no complications.</li>
+        </ul>
+        <p class="text-lg text-gray-700 leading-relaxed mt-10 mb-6 font-bold">With ZoomBaby, baby essentials are just a message away.</p>
+        <form class="mt-8 flex items-center space-x-2 justify-center" onsubmit="sendWhatsAppMessage(event)">
+            <select id="countryCodeFooter" class="px-3 py-3 text-lg border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 font-sans">
+                <option value="+91">+91 🇮🇳</option>
+                <option value="+1">+1 🇺🇸</option>
+                <option value="+44">+44 🇬🇧</option>
+                <option value="+61">+61 🇦🇺</option>
+                <option value="+65">+65 🇸🇬</option>
+            </select>
+            <input type="tel" id="whatsappNumberFooter" placeholder="WhatsApp number" maxlength="10" pattern="[0-9]{10}" class="px-4 py-3 text-base border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" required>
+            <button type="submit" class="bg-blue-400 text-white px-6 py-3 rounded-full shadow-lg hover:bg-blue-500 transition">Join Waitlist</button>
+        </form>
+    </section> 
+  
+    <script>
+        function sendWhatsAppMessage(event) {
+            event.preventDefault();
+            var countryCode = document.getElementById('countryCode').value;
+            var number = document.getElementById('whatsappNumber').value;
+            var whatsappUrl = 'https://wa.me/917702838062?text=Hello%2C%20I%20am%20interested%20in%20ZoomBaby!%20My%20WhatsApp%20number%20is%20' + countryCode + number;
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+    <!-- Footer -->
+    <footer class="bg-blue-100 py-6 text-center text-gray-700 text-lg mt-10 shadow-md">
+        © 2025 ZoomBaby™. All rights reserved.
+    </footer>
+</body>
+</html>
